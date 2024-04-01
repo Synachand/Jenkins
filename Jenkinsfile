@@ -6,7 +6,7 @@ pipeline {
         docker { image 'maven:latest' }
       }
       steps {
-        sh 'mvn --version'
+        sh 'sudo mvn -version'
       }
     }
     stage('Front-end') {
@@ -14,7 +14,7 @@ pipeline {
         docker { image 'node:16-alpine' }
       }
       steps {
-        sh 'node --version'
+        sh 'sudo node -version'
       }
     }
   }
